@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>58.0</apiVersion>
-    <masterLabel>Carbon Footprint Record Page</masterLabel>
-    <template>flexipage:recordHomeTemplateDesktop</template>
-    <flexiPageRegions>
-        <name>main</name>
-        <type>Region</type>
-        <components>
-            <componentInstance>
-                <componentName>force:recordDetail</componentName>
-            </componentInstance>
-        </components>
-    </flexiPageRegions>
-    <type>RecordPage</type>
-    <entity>CarbonFootprint__c</entity>
-</FlexiPage>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Carbon Footprint Access</label>
+    <description>Access to CarbonFootprint__c and Subscription__c objects</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <objectPermissions>
+        <object>CarbonFootprint__c</object>
+        <allowRead>true</allowRead>
+        <allowCreate>true</allowCreate>
+        <allowEdit>true</allowEdit>
+        <allowDelete>false</allowDelete>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Subscription__c</object>
+        <allowRead>true</allowRead>
+        <allowCreate>true</allowCreate>
+        <allowEdit>true</allowEdit>
+        <allowDelete>false</allowDelete>
+    </objectPermissions>
+</PermissionSet>
