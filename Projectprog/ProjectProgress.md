@@ -45,3 +45,30 @@ ________________________________________
 Some apps on AppExchange (like Sustainability Cloud) already track emissions — but since we’re building a custom, student/project-focused version, we’ll design simpler custom objects and automation.
 (If you want, we could also reference Sustainability Cloud in your final presentation to show “future upgrade path.”)
 
+Phase 2
+1. Salesforce Edition
+•	Using Developer Edition
+•	Supports Custom Objects like Subscription__c and CarbonFootprint__c, Apex, Flows, and LWC.
+____________________________________________
+2. Company Profile Setup
+•	Navigated to Setup → Company Information.
+•	Verified and updated the Company Name, Default Locale, Language, Currency, and Time Zone.
+_____________________________________________
+3. Dev Org Setup
+•	Created a Developer Edition Org (e.g., GreenEnergyTracker) and connected it to VS Code using Salesforce CLI (sf).
+•	This org serves as the main development environment where all metadata (objects like CarbonFootprint__c, Subscription__c, tabs, layouts, and permission sets) is stored.
+•	Create a Scratch Org (temporary org) for testing new features such as new fields, layouts, or Lightning pages before pushing them back to the main org.
+__________________________________________
+4. Sandbox Usage
+•	Since Developer Edition does not provide Sandboxes, you use a Scratch Org as a substitute.
+•	Example: Before making big changes to the CarbonFootprint__c object (adding fields or layouts), you test it in the Scratch Org.
+•	This prevents breaking the main Dev Org and allows experimentation with Flows, Apex, and Lightning App Builder changes.
+•	Once tested, you push only stable metadata from Scratch Org → Dev Org.
+__________________________________________
+5. Deployment Basics
+•	Salesforce CLI (SFDX) used as the primary deployment method:
+     1.sf project deploy start for pushing metadata.
+     2. sf project retrieve start for pulling changes from org to local.
+•	Awareness of Change Sets (admin-friendly) as an alternative deployment option. 
+•	 Queues, Flows, Profiles, and LWC successfully deployed between scratch and main org.
+
