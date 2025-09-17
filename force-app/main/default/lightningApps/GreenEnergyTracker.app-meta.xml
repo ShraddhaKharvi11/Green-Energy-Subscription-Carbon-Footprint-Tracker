@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Green Energy Tracker App</description>
+    <label>Green Energy Tracker</label>
+    <tabs>
+        <tab>Subscription__c</tab>
+        <tab>CarbonFootprint__c</tab>
+    </tabs>
+</LightningApplication>

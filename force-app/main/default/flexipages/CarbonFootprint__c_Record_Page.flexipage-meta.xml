@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Carbon Footprint Record Page</masterLabel>
+    <description>Lightning Record Page for Carbon Footprint object</description>
+    <pageTemplate>recordHomeFlexiPageTemplate</pageTemplate>
+    <sobjectType>CarbonFootprint__c</sobjectType>
+    <type>RecordPage</type>
+
+    <flexiPageRegions>
+        <region>
+            <name>header</name>
+            <components>
+                <componentInstance>
+                    <componentName>force:highlightsPanel</componentName>
+                </componentInstance>
+            </components>
+        </region>
+        <region>
+            <name>main</name>
+            <components>
+                <componentInstance>
+                    <componentName>force:recordDetail</componentName>
+                </componentInstance>
+            </components>
+        </region>
+        <region>
+            <name>sidebar</name>
+            <components/>
+        </region>
+    </flexiPageRegions>
+
+    <apiVersion>58.0</apiVersion>
+</FlexiPage>
