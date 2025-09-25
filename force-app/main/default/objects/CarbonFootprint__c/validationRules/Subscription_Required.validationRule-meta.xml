@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Required</fullName>
+    <active>true</active>
+    <description>Ensure that a subscription is linked to the carbon footprint</description>
+    <errorConditionFormula>ISBLANK(Subscription__c)</errorConditionFormula>
+    <errorMessage>Subscription must be selected</errorMessage>
+    <errorDisplayField>Subscription__c</errorDisplayField>
+</ValidationRule>

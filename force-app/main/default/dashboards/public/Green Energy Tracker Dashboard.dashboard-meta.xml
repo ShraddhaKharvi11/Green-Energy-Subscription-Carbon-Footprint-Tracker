@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <title>Green Energy Tracker Dashboard</title>
+    <description>Dashboard to track CO₂ savings by energy type and subscription</description>
+
+    <!-- Required fields -->
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>LeftToRight</backgroundFadeDirection>
+    <textColor>#000000</textColor>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+
+    <leftSection>
+        <components>
+            <!-- Visualization type -->
+            <componentType>BarChart</componentType>
+            <header>CO₂ Saved by Energy Type</header>
+
+            <!-- Reference the source report -->
+            <report>unfiled$public/CO2_Saved_by_Energy_Type_Deploy</report>
+
+            <!-- Chart-specific attributes -->
+            <showValues>true</showValues>
+        </components>
+    </leftSection>
+</Dashboard>

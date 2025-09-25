@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Negative_CO2</fullName>
+    <active>true</active>
+    <description>Do not allow negative CO2 Saved values</description>
+    <errorConditionFormula>CO2_Saved__c &lt; 0</errorConditionFormula>
+    <errorMessage>CO2 Saved cannot be negative</errorMessage>
+    <errorDisplayField>CO2_Saved__c</errorDisplayField>
+</ValidationRule>

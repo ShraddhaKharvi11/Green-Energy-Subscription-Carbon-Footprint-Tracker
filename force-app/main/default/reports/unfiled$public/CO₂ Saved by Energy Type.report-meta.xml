@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <format>Tabular</format>
+    <reportType>Account</reportType>
+    <description>CO2 saved by energy type</description>
+    <name>CO2_Saved_by_Energy_Type</name>
+    <columns>
+        <field>Account.Name</field>
+        <field>Energy_Type__c</field>
+        <field>CO2_Saved__c</field>
+    </columns>
+    <filters>
+        <field>IsActive</field>
+        <operator>equals</operator>
+        <value>true</value>
+    </filters>
+    <reportMetadata>
+        <name>CO2_Saved_by_Energy_Type</name>
+        <folder>unfiled$public</folder>
+    </reportMetadata>
+</Report>
