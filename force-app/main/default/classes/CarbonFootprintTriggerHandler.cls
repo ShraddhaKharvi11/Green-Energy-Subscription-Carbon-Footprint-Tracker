@@ -1,26 +1,10 @@
-public with sharing class CarbonFootprintTriggerHandler {
-
-    // Handles before insert trigger
-    public static void handleBeforeInsert(List<CarbonFootprint__c> newRecords) {
-        for (CarbonFootprint__c cf : newRecords) {
-            // Example logic: default status
-            cf.Status__c = 'Pending';
-            
-            // Example: calculate carbon savings
-            if (cf.EnergyConsumed__c != null && cf.RenewableFactor__c != null) {
-                cf.CarbonSaved__c = cf.EnergyConsumed__c * cf.RenewableFactor__c;
-            }
-        }
-    }
-
-    // Handles before update trigger
-    public static void handleBeforeUpdate(List<CarbonFootprint__c> updatedRecords, Map<Id, CarbonFootprint__c> oldMap) {
-        for (CarbonFootprint__c cf : updatedRecords) {
-            CarbonFootprint__c oldCF = oldMap.get(cf.Id);
-
-            // Example: if energy consumed changed, recalc carbon savings
-            if (cf.EnergyConsumed__c != oldCF.EnergyConsumed__c && cf.RenewableFactor__c != null) {
-                cf.CarbonSaved__c = cf.EnergyConsumed__c * cf.RenewableFactor__c;
+public class CarbonFootprintHandler {
+    // Method to handle before insert and update
+    public static void handleBeforeInsertOrUpdate(List<CarbonFootprint__c> records) {
+        for (CarbonFootprint__c cf : records) {
+            // Example logic: calculate CO2 saved
+            if (cf.Energy_Saved__c != null && cf.Emission_Factor__c != null) {
+                cf.CO2_Saved__c = cf.Energy_Saved__c * cf.Emission_Factor__c;
             }
         }
     }

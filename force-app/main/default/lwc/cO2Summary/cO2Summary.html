@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CO₂ Summary" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <template if:true={totalCO2}>
+                <p>Total CO₂ Saved: {totalCO2} kg</p>
+            </template>
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error: {error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
